@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/personFragment">
+
+    <fragment
+        android:id="@+id/personFragment"
+        android:name="com.wordbox.test2.presentation.person.view.PersonFragment"
+        android:label="Personas"
+        tools:layout="@layout/fragment_person" >
+        <action
+            android:id="@+id/action_personFragment_to_personDetailFragment"
+            app:destination="@id/personDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personDetailFragment"
+        android:name="com.wordbox.test2.presentation.person_detail.PersonDetailFragment"
+        android:label="PersonDetailFragment" >
+        <argument
+            android:name="model"
+            app:argType="com.wordbox.test2.presentation.person.model.PersonModel" />
+    </fragment>
+</navigation>
